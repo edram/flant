@@ -189,6 +189,7 @@ class _FlanStepperState extends State<FlanStepper> {
     if (widget.value != oldWidget.value) {
       if (widget.value.toString() != current.value.toString()) {
         current.value = format(widget.value);
+        textEditingController.text = current.value.toString();
       }
     }
     super.didUpdateWidget(oldWidget);
